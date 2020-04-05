@@ -51,12 +51,6 @@
                                 HorizontalOptions="Start" VerticalOptions="Start"
                                 FontSize="16"
                                 Text="{Binding Location}"/>
-                            <!--<Image
-                                Grid.Row="0" Grid.RowSpan="2"
-                                WidthRequest="80" HeightRequest="80"
-                                Source="{Binding ImageUrl}"
-                                sharedTransitions:Transition.Name="MonkeyImage"
-                                sharedTransitions:Transition.Group="{Binding Id}"/>-->
                             <ffimageloading:CachedImage HeightRequest="80"
                                                         Grid.Row="0" Grid.RowSpan="2"
                                                         Aspect="AspectFit"
@@ -66,40 +60,7 @@
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-            
+            </ListView.ItemTemplate>            
         </ListView>
-        <!--<StackLayout Orientation="Vertical"
-                     BindableLayout.ItemsSource="{Binding AllMonkey}">
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                            Grid.Row="0" Grid.Column="1"
-                            HorizontalOptions="Start" VerticalOptions="End"
-                            FontSize="24"
-                            Text="{Binding Name}"/>
-
-                        <Label
-                            Grid.Row="1" Grid.Column="1"
-                            HorizontalOptions="Start" VerticalOptions="Start"
-                            FontSize="16"
-                            Text="{Binding Location}"/>
-                        <Image
-                            Grid.Row="0" Grid.RowSpan="2"
-                            WidthRequest="80" HeightRequest="80"
-                            Source="{Binding ImageUrl}"/>
-                    </Grid>
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </StackLayout>-->
     </Grid>
 </ContentPage>

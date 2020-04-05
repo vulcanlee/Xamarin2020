@@ -23,18 +23,18 @@
                                                         sharedTransitions:Transition.Name="MonkeyImage"
                                                         />
                 <Label
-            HorizontalOptions="Center" VerticalOptions="End"
-            FontSize="24"
-            Text="{Binding Monkey.Name}"/>
+                    HorizontalOptions="Center" VerticalOptions="End"
+                    FontSize="24"
+                    Text="{Binding Monkey.Name}"/>
 
                 <Label
-            HorizontalOptions="Center" VerticalOptions="Start"
-            FontSize="16"
-            Text="{Binding Monkey.Location}"/>
+                    HorizontalOptions="Center" VerticalOptions="Start"
+                    FontSize="16"
+                    Text="{Binding Monkey.Location}"/>
                 <Label
-            HorizontalOptions="Start" VerticalOptions="Start"
-            FontSize="14"
-            Text="{Binding Monkey.Details}"/>
+                    HorizontalOptions="Start" VerticalOptions="Start"
+                    FontSize="14"
+                    Text="{Binding Monkey.Details}"/>
             </StackLayout>
         </ScrollView>
     </Grid>
