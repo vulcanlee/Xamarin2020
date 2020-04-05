@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+             x:Class="xfSharedTransitions.Views.DetailPage"
+             Title="{Binding Monkey.Name, StringFormat='猴子:{0}'}"
+             >
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <!--<Image
+            Source="{Binding Monkey.ImageUrl}"
+            WidthRequest="150" HeightRequest="150"
+            sharedTransitions:Transition.Name="MonkeyImage"
+            />-->
+                <ffimageloading:CachedImage HeightRequest="300" WidthRequest="300"
+                                                        Aspect="AspectFit"
+                                                        Source="{Binding Monkey.ImageUrl}"
+                                                        sharedTransitions:Transition.Name="MonkeyImage"
+                                                        />
+                <Label
+            HorizontalOptions="Center" VerticalOptions="End"
+            FontSize="24"
+            Text="{Binding Monkey.Name}"/>
+
+                <Label
+            HorizontalOptions="Center" VerticalOptions="Start"
+            FontSize="16"
+            Text="{Binding Monkey.Location}"/>
+                <Label
+            HorizontalOptions="Start" VerticalOptions="Start"
+            FontSize="14"
+            Text="{Binding Monkey.Details}"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image
+            Source="{Binding Monkey.ImageUrl}"
+            WidthRequest="150" HeightRequest="150"
+            sharedTransitions:Transition.Name="MonkeyImage"
+            />
+        <Label
+            Grid.Row="1" Grid.Column="0"
+            HorizontalOptions="Center" VerticalOptions="End"
+            FontSize="24"
+            Text="{Binding Monkey.Name}"/>
+
+        <Label
+            Grid.Row="2" Grid.Column="0"
+            HorizontalOptions="Center" VerticalOptions="Start"
+            FontSize="16"
+            Text="{Binding Monkey.Location}"/>
+        <Label
+            Grid.Row="3" Grid.Column="0"
+            HorizontalOptions="Start" VerticalOptions="Start"
+            FontSize="14"
+            Text="{Binding Monkey.Details}"/>
+
+    </Grid>-->
+    
+</ContentPage>
